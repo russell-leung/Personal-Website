@@ -1,12 +1,15 @@
 <template>
     <div id="homePage">
       <div id="greeting">
-        <h2 id="greeting-top">Hi, Im</h2>
+        <h2 id="greeting-top">Hi, I'm</h2>
         <h1 id="greeting-bottom">Russell Leung</h1>
       </div>
       <div id="about-me">
-        About me content, have the animation zoom in from thr right, also put padding on the top and make it like 3 rem
+        I'm a college student studying Computer Science at Northeastern
+        University! I'm looking to pursue a career in and have experience
+        with Full-Stack development.
       </div>
+      <!-- Keep breif, will explain more liek teck stack in about me, also remeber to put education in exierence and put clubs -->
       <!-- TODO: fix about-me and add social medias in a div below with flex or something -->
     </div>
 </template>
@@ -19,19 +22,25 @@ export default {
 
 <style scoped>
 #greeting {
-  float: left;
   font-size: 4rem;
 }
 #greeting-top {
   margin-bottom: 0;
-  animation: fadeIn 3s;
+  animation: fadeIn 2s;
+  font-weight: normal;
 }
 #greeting-bottom {
-  margin-top: 0;
-  animation: fadeIn 5s;
+  margin: 0;
+  animation: fadeIn 4s;
 }
 #about-me {
   font-size: 3rem;
+  background-color: #F1A208;
+  border-radius: 1%;
+  padding: 2%;
+  margin: 0 0 10% 0;
+  color: white;
+  animation: fadeIn 6s;
 }
 @keyframes fadeIn {
   0% { opacity: 0; }

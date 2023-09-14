@@ -3,6 +3,7 @@
       <div>
         <h1 id="logo">Russell Leung</h1>
         <!-- TODO: Replace with logo of some sort-->
+        <!-- Other idea, replace it with title, use props to pass in on different pages -->
         <!-- <img alt="Russell Leung logo" src="../assets/logo.png"> -->
       </div>
       <div id="links"> 
@@ -23,12 +24,13 @@ export default {
   name: 'NavBar',
   data () {
     return {
+      // TODO: switch links to better order, have about
       links: {
-        'Home': '#home_page',
-        'Portfolio': '#portfolio_page',
-        'Experience': '#experience_page',
-        'About': '#about_page',
-        'Contact': '#contact_page',
+        'Home': '#homePage',
+        'Portfolio': '#portfolioPage',
+        'Experience': '#experiencePage',
+        'About': '#aboutPage',
+        'Contact': '#contactPage',
       },
     }
   }

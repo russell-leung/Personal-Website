@@ -20,6 +20,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 5% 5% 0 5%;
+  margin: 2.5% 5% 5% 5%;
 }
 </style>
