@@ -1,5 +1,7 @@
 # personal-portfolio
 
+Russell Leung Personal Portfolio Website, Built with Vue.js
+
 ## Project setup
 ```
 npm install
