@@ -1,7 +1,9 @@
 <template>
     <div id="portfolioPage">
-        <h1>Portfolio</h1>
-        <h2>Here is a few projects I've worked on!</h2>
+        <div>
+            <h1>Portfolio</h1>
+            <h2>Here is a few projects I've worked on!</h2>
+        </div>
         <div
             v-for="(projectDescription, projectName, index) in projects"
             :key="projectName"
@@ -65,5 +67,9 @@ h2 {
     border: 1px solid black;
     padding: 2% 0;
     margin: 2% 0;
+}
+#projectDescription {
+    background-color: #F1A208;
+    color: white;
 }
 </style>

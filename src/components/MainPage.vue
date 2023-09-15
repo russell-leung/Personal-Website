@@ -1,9 +1,9 @@
 <template>
     <div>
-        <NavBar></NavBar>
-        <HomePage></HomePage>
-        <PortfolioPage></PortfolioPage>
-        <ExperiencePage></ExperiencePage>
+        <NavBar />
+        <HomePage />
+        <PortfolioPage />
+        <ExperiencePage />
     </div>
 </template>
   
