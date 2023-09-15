@@ -25,12 +25,20 @@
                     style="float: right;"
                     @click="hideTechStackDescription()"
                   />
-                <h4 id="techStackDescriptionTitle" ref="techStackDescriptionTitle"></h4>
+                <h4 id="techStackDescriptionTitle" ref="techStackDescriptionTitle">Click an Icon above to learn more!</h4>
                 <p id="techStackDescription" ref="techStackDescription"></p>
               </div>
             </div>
-            <div> Work Experience Next! </div>
-            <div> Now Education! </div>
+            <div id="experienceContainer">
+              <div id="workExperience">
+                <h4>Work Experience</h4>
+                <p>Blah Blah Blah</p>
+              </div>
+              <div id="educationExperience">
+                <h4>Education Experience</h4>
+                <p>Blah blah blah</p>
+              </div>
+            </div>
         </div>
     </div>
 </template>
@@ -82,15 +90,14 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 2% 0 0 0;
+  margin: 2% 0 2% 0;
   justify-content: space-evenly;
 }
 #techStackDescriptionContainer {
-  display: none;
   background-color: #F1A208;
   border-radius: 1%;
   padding: 2%;
-  margin: 2% 0 0 0;
+  margin: 0 0 2% 0;
   color: white;
 }
 #techStackDescriptionTitle {
@@ -100,5 +107,21 @@ h1 {
 #techStackDescription {
   font-size: 2rem;
   margin: 0;
+}
+#experienceContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+#workExperience, #educationExperience {
+  width: 45%;
+  background-color: #F1A208;
+  color: white;
+  padding: 3% 0;
+  margin: 2% 0;
+}
+#experienceContainer h4 {
+  margin: 0;
+  font-size: 3rem;
 }
 </style>

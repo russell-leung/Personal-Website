@@ -19,12 +19,11 @@ import { faGit } from '@fortawesome/free-brands-svg-icons'
 
 /* import other miscellaneous icons */
 import {faX } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library.add(
     faJs, faPython, faJava, faHtml5, faCss3,
-    faPhp, faLinux, faGit, faX, faLinkedin,
+    faPhp, faLinux, faGit, faX,
 )
 
 createApp(App)

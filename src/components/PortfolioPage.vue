@@ -9,8 +9,7 @@
             :key="projectName"
             id="projectsContainer"
         >
-        <!-- TODO: depending on if index is even/odd, change flex direction so it alternates picture/link and description -->
-        <!-- Name image the same as project name so i can use something like :href="../assets/{projectName}.png" -->
+        <!-- TODO: Name image the same as project name so i can use something like :href="../assets/{projectName}.png" -->
             <div id="projectContainer" :class="{ reverseDirection: (index % 2 == 1) }">
                 <div id="projectDescription">
                     <h3>
@@ -64,6 +63,7 @@ h2 {
 }
 #projectDescription, #projectVisual {
     width: 45%;
+    /* TODO: remove background/find perm solution */
     border: 1px solid black;
     padding: 2% 0;
     margin: 2% 0;
