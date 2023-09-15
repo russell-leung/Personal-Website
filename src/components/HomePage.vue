@@ -38,7 +38,7 @@ export default {
   background-color: #F1A208;
   border-radius: 1%;
   padding: 2%;
-  margin: 0 0 10% 0;
+  margin: 2% 0 0 0;
   color: white;
   animation: fadeIn 6s;
 }

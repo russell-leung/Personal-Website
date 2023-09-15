@@ -1,7 +1,7 @@
 <template>
   <MainPage></MainPage>
 </template>
-
+<!-- TODO: run script to fix tab spaces / make them all 4 spaces -->
 <script>
 import MainPage from './components/MainPage.vue'
 

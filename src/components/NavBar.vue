@@ -26,10 +26,9 @@ export default {
     return {
       // TODO: switch links to better order, have about
       links: {
-        'Home': '#homePage',
+        'Home': '#',
         'Portfolio': '#portfolioPage',
         'Experience': '#experiencePage',
-        'About': '#aboutPage',
         'Contact': '#contactPage',
       },
     }
@@ -64,5 +63,5 @@ a {
 }
 a:hover {
   color: #F1A208;
-} 
+}
 </style>
