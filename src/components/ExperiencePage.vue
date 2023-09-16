@@ -11,8 +11,9 @@
                   <font-awesome-icon
                     :icon="['fab', icon]"
                     :alt="iconDescription"
+                    :id="icon"
                     size="7x"
-                    class="icon"
+                    class="icon techStackIcon"
                     @click="changeTechStackDescription(icon)"
                   />
                 </div>
@@ -30,13 +31,49 @@
               </div>
             </div>
             <div id="experienceContainer">
-              <div id="workExperience">
+              <div id="workExperienceContainer">
                 <h4>Work Experience</h4>
-                <p>Blah Blah Blah</p>
+                <div class="experienceSection">
+                  <div
+                    v-for="(experienceDetails, experience) in workExperience"
+                    :key="experience"
+                    class="experienceCard"
+                  >
+                    <p style="font-size: 2.5rem;"><b>{{ experience }}</b></p>
+                    <ul>
+                      <p style="font-size: 1.75rem; text-align: left;"><b><u>{{ experienceDetails['jobTitle'] }}</u></b></p>
+                      <li
+                        v-for="(bulletPoint, index) in experienceDetails['experienceBulletPoints']"
+                        :key="index"
+                        style="font-size: 1.5rem; text-align: start;"
+                      > 
+                        {{ bulletPoint }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div id="educationExperience">
+              <div id="educationExperienceContainer">
                 <h4>Education Experience</h4>
-                <p>Blah blah blah</p>
+                <div class="experienceSection">
+                  <div
+                    v-for="(experienceDetails, experience) in educationExperience"
+                    :key="experience"
+                    class="experienceCard"
+                  >
+                    <p style="font-size: 2.5rem;"><b>{{ experience }}</b></p>
+                    <ul>
+                      <p style="font-size: 1.75rem; text-align: left;"><b><u>{{ experienceDetails['degree'] }}</u></b></p>
+                      <li
+                        v-for="(bulletPoint, index) in experienceDetails['experienceBulletPoints']"
+                        :key="index"
+                        style="font-size: 1.5rem; text-align: start;"
+                      > 
+                        {{ bulletPoint }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
         </div>
@@ -48,29 +85,85 @@ export default {
   name: 'ExperiencePage',
   data () {
     return {
+      currentTechStackIcon: null,
       techStackIcons: {
         'js': 'I have 3+ years of experience with JavaScript (JS). ' +
               'I\'ve used JS, Node.js, JQuery, and Vue.js both in personal projects, ' +
               'such as this website you\'re viewing currentl, as well as in ' +
               'my prior internship experience at HydraCor, LLC as a Software Developer Intern.',
-        'python': 'python description',
-        'java': 'java description',
-        'html5': 'html5 description',
-        'css3': 'css3 description',
-        'php': 'php description',
-        'linux': 'linux description',
-        // TODO: link github here, using <a> tags and render this with v-html
-        'git': 'git description',
+        'python': 'I have 4+ years of experience with Python. ' +
+                  'I\'ve used Django, Flask, and NumPy in personal projects and classes. ' +
+                  'I\'m familiar with Python Object Oriented Programming and Data Structures.',
+        'java': 'I have about a year of experience using Java. ' +
+                'While I\'m not as familiar with Java compared to other languages, ' +
+                'I recieved a 5 on the AP Computer Science A test, and am familiar with basic ' +
+                'Java Object Oriented Programming and Algorithms.',
+        'html5': 'I have 4+ years of experience using HTML (HyperText Markup Language) ' +
+                  'via multiple classes and projects, like the website you are viewing now. ' +
+                  'You can find more examples on my github (<a>https://github.com/russell-leung</a>)',
+        'css3': 'I have 4+ years of experience using CSS (Cascading Style Sheets) ' +
+                'throught many projects and classes, similar to HTML as they go hand in hand.' +
+                'I also have experience using TailwindCSS and Bootstrap.',
+        'php': 'I have about 2 years of experience using PHP via personal projects ' +
+                'and my internship at HydraCor, LLC. I have experience using CakePHP, a ' +
+                'PHP framework. I\'ve used PHP to create API endpoints and write server-side ' +
+                'web application logic along with SQL and MariaDB.',
+        'linux': 'I have about a year of experience with Linux. I\'ve used Linux (Ubuntu) ' +
+                  'during my internship at HydraCor, LLC. I\'m also familiar with Unix (MacOS).',
+        'git': 'I\'ve been using Git and GitHub for 4+ years now. I\'m very familiar ' +
+                'with version control. Checkout my github @russell-leung (<a>https://github.com/russell-leung</a>) ' +
+                'for some of my projects!',
+      },
+      workExperience: {
+        'HydraCor': {
+          'jobTitle': 'Software Developer Intern',
+          'experienceBulletPoints': [
+            'Made new features using Vue.js and CakePHP',
+            'Discovered and squashed bugs',
+            'Advised and aided junior developers and peers',
+            'Utilized SQL, Docker, Azure, and GIT',
+            'Wrote unit tests and database migrations',
+            'Participated in Scrum/Agile system process',
+          ],
+        },
+      },
+      educationExperience: {
+        'Haverhill High School': {
+          'degree': 'High School Diploma',
+          'experienceBulletPoints': [
+            'CVTE Computer Science Academy',
+            'STEM Academy',
+            'Classical Academy',
+            'Advanced Placement (AP)',
+            'Dual Enrollement @ NECC',
+          ]
+        },
+        'Northeastern': {
+          'degree': 'B.S. Computer Science',
+          'experienceBulletPoints': [
+            'Freshman (est. Grad Date 2027)',
+            'Northeastern Honors',
+            'NEU Oasis'
+          ],
+        },
       },
     }
   },
   methods: {
     changeTechStackDescription (icon) {
-      this.$refs.techStackDescriptionContainer.style.display = 'block';
+      if (this.currentTechStackIcon) {
+        document.querySelector(`#${this.currentTechStackIcon}`).style.color = 'inherit';
+      }
+      this.currentTechStackIcon = icon;
+      document.querySelector(`#${icon}`).style.color = '#F1A208';
       this.$refs.techStackDescriptionTitle.innerHTML = icon.toUpperCase();
       this.$refs.techStackDescription.innerHTML = this.techStackIcons[icon];
+      this.$refs.techStackDescriptionContainer.style.display = 'block';
     },
     hideTechStackDescription () {
+      if (this.currentTechStackIcon) {
+        document.querySelector(`#${this.currentTechStackIcon}`).style.color = 'inherit';
+      }
       this.$refs.techStackDescriptionContainer.style.display = 'none';
     }
   }
@@ -93,6 +186,9 @@ h1 {
   margin: 2% 0 2% 0;
   justify-content: space-evenly;
 }
+.techStackIcon:hover {
+  color: #F1A208 !important;
+}
 #techStackDescriptionContainer {
   background-color: #F1A208;
   border-radius: 1%;
@@ -113,15 +209,24 @@ h1 {
   justify-content: space-evenly;
   width: 100%;
 }
-#workExperience, #educationExperience {
+#experienceContainer h4 {
+  margin: 0;
+  font-size: 3rem;
+}
+#workExperienceContainer, #educationExperienceContainer {
   width: 45%;
   background-color: #F1A208;
   color: white;
   padding: 3% 0;
   margin: 2% 0;
 }
-#experienceContainer h4 {
+.experienceSection p, .experienceSection ul {
   margin: 0;
-  font-size: 3rem;
+}
+.experienceCard {
+  background-color: white;
+  color: #2c3e50;
+  margin: 3% 5%;
+  padding: 1%;
 }
 </style>

@@ -4,6 +4,7 @@
         <HomePage />
         <PortfolioPage />
         <ExperiencePage />
+        <ContactPage />
     </div>
 </template>
   
@@ -12,6 +13,7 @@ import NavBar from '../components/NavBar.vue'
 import HomePage from '../components/HomePage.vue'
 import PortfolioPage from '../components/PortfolioPage.vue'
 import ExperiencePage from './ExperiencePage.vue';
+import ContactPage from './ContactPage.vue';
   
 export default {
   name: 'MainPage',
@@ -20,6 +22,7 @@ export default {
     HomePage,
     PortfolioPage,
     ExperiencePage,
+    ContactPage,
   }
 }
 </script>
