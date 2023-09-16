@@ -128,6 +128,14 @@ export default {
         },
       },
       educationExperience: {
+        'Northeastern': {
+          'degree': 'B.S. Computer Science',
+          'experienceBulletPoints': [
+            'Freshman (est. Grad Date 2027)',
+            'Northeastern Honors',
+            'NEU Oasis'
+          ],
+        },
         'Haverhill High School': {
           'degree': 'High School Diploma',
           'experienceBulletPoints': [
@@ -137,14 +145,6 @@ export default {
             'Advanced Placement (AP)',
             'Dual Enrollement @ NECC',
           ]
-        },
-        'Northeastern': {
-          'degree': 'B.S. Computer Science',
-          'experienceBulletPoints': [
-            'Freshman (est. Grad Date 2027)',
-            'Northeastern Honors',
-            'NEU Oasis'
-          ],
         },
       },
     }

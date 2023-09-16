@@ -9,8 +9,6 @@
         University! I'm looking to pursue a career in and have experience
         with Full-Stack development.
       </div>
-      <!-- Keep breif, will explain more liek teck stack in about me, also remeber to put education in exierence and put clubs -->
-      <!-- TODO: fix about-me and add social medias in a div below with flex or something -->
     </div>
 </template>
 
