@@ -24,8 +24,8 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library.add(
-    faJs, faPython, faJava, faHtml5, faCss3,
-    faPhp, faLinux, faGit, faX, faLinkedin, faInstagram
+	faJs, faPython, faJava, faHtml5, faCss3,
+	faPhp, faLinux, faGit, faX, faLinkedin, faInstagram
 )
 
 createApp(App)
