@@ -64,7 +64,8 @@ h2 {
 #projectDescription, #projectVisual {
     width: 45%;
     /* TODO: remove background/find perm solution */
-    border: 1px solid black;
+    /* TODO: change border radius to 1% */
+    border: 1px solid #2c3e50;
     padding: 2% 0;
     margin: 2% 0;
 }

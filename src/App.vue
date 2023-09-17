@@ -21,5 +21,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin: 2.5% 5% 5% 5%;
+  word-break: break-word;
 }
 </style>

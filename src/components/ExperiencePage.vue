@@ -100,7 +100,7 @@ export default {
                 'Java Object Oriented Programming and Algorithms.',
         'html5': 'I have 4+ years of experience using HTML (HyperText Markup Language) ' +
                   'via multiple classes and projects, like the website you are viewing now. ' +
-                  'You can find more examples on my github (<a>https://github.com/russell-leung</a>)',
+                  'You can find more examples on my github (https://github.com/russell-leung)',
         'css3': 'I have 4+ years of experience using CSS (Cascading Style Sheets) ' +
                 'throught many projects and classes, similar to HTML as they go hand in hand.' +
                 'I also have experience using TailwindCSS and Bootstrap.',
@@ -121,14 +121,14 @@ export default {
             'Made new features using Vue.js and CakePHP',
             'Discovered and squashed bugs',
             'Advised and aided junior developers and peers',
-            'Utilized SQL, Docker, Azure, and GIT',
+            'Utilized SQL, Docker, Azure, and Git',
             'Wrote unit tests and database migrations',
             'Participated in Scrum/Agile system process',
           ],
         },
       },
       educationExperience: {
-        'Northeastern': {
+        'Northeastern University': {
           'degree': 'B.S. Computer Science',
           'experienceBulletPoints': [
             'Freshman (est. Grad Date 2027)',
@@ -150,7 +150,7 @@ export default {
     }
   },
   methods: {
-    changeTechStackDescription (icon) {
+    changeTechStackDescription(icon) {
       if (this.currentTechStackIcon) {
         document.querySelector(`#${this.currentTechStackIcon}`).style.color = 'inherit';
       }
@@ -160,7 +160,7 @@ export default {
       this.$refs.techStackDescription.innerHTML = this.techStackIcons[icon];
       this.$refs.techStackDescriptionContainer.style.display = 'block';
     },
-    hideTechStackDescription () {
+    hideTechStackDescription() {
       if (this.currentTechStackIcon) {
         document.querySelector(`#${this.currentTechStackIcon}`).style.color = 'inherit';
       }
@@ -183,7 +183,7 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 2% 0 2% 0;
+  margin: 2% 0;
   justify-content: space-evenly;
 }
 .techStackIcon:hover {
@@ -219,6 +219,7 @@ h1 {
   color: white;
   padding: 3% 0;
   margin: 2% 0;
+  border-radius: 1%;
 }
 .experienceSection p, .experienceSection ul {
   margin: 0;
