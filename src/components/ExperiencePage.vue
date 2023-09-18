@@ -12,7 +12,6 @@
 							:icon="['fab', icon]"
 							:alt="iconDescription"
 							:id="icon"
-							size="7x"
 							class="icon techStackIcon"
 							@click="changeTechStackDescription(icon)"
 						/>
@@ -21,8 +20,8 @@
 				<div id="techStackDescriptionContainer" ref="techStackDescriptionContainer">
 					<font-awesome-icon
 						:icon="['fas', 'x']"
-						size="3x"
 						class="icon"
+						id="closeDescription"
 						style="float: right;"
 						@click="hideTechStackDescription()"
 					/>
@@ -39,13 +38,13 @@
 							:key="experience"
 							class="experienceCard"
 						>
-							<p style="font-size: 2.5rem;"><b>{{ experience }}</b></p>
+							<p class="experienceCardTitle"><b>{{ experience }}</b></p>
 							<ul>
-								<p style="font-size: 1.75rem; text-align: left;"><b><u>{{ experienceDetails['jobTitle'] }}</u></b></p>
+								<p class="experienceCardSecondaryTitle"><b><u>{{ experienceDetails['jobTitle'] }}</u></b></p>
 								<li
 									v-for="(bulletPoint, index) in experienceDetails['experienceBulletPoints']"
 									:key="index"
-									style="font-size: 1.5rem; text-align: start;"
+									class="experienceCardBulletPoint"
 								> 
 									{{ bulletPoint }}
 								</li>
@@ -61,13 +60,13 @@
 							:key="experience"
 							class="experienceCard"
 						>
-							<p style="font-size: 2.5rem;"><b>{{ experience }}</b></p>
+							<p class="experienceCardTitle"><b>{{ experience }}</b></p>
 							<ul>
-							<p style="font-size: 1.75rem; text-align: left;"><b><u>{{ experienceDetails['degree'] }}</u></b></p>
+							<p class="experienceCardSecondaryTitle"><b><u>{{ experienceDetails['degree'] }}</u></b></p>
 							<li
 								v-for="(bulletPoint, index) in experienceDetails['experienceBulletPoints']"
 								:key="index"
-								style="font-size: 1.5rem; text-align: start;"
+								class="experienceCardBulletPoint"
 							> 
 								{{ bulletPoint }}
 							</li>
@@ -186,6 +185,9 @@ h1 {
 	margin: 2% 0;
 	justify-content: space-evenly;
 }
+.techStackIcon {
+	font-size: 7em;
+}
 .techStackIcon:hover {
 	color: #F1A208 !important;
 }
@@ -203,6 +205,9 @@ h1 {
 #techStackDescription {
 	font-size: 2rem;
 	margin: 0;
+}
+#closeDescription {
+	font-size: 3em;
 }
 #experienceContainer {
 	display: flex;
@@ -231,9 +236,49 @@ h1 {
 	margin: 3% 5%;
 	padding: 1%;
 }
-@media only screen and (max-width: 768px) {
+.experienceCardTitle {
+	font-size: 2.5rem;
+}
+.experienceCardSecondaryTitle {
+	font-size: 1.75rem;
+	text-align: left;
+}
+.experienceCardBulletPoint {
+	font-size: 1.5rem;
+	text-align: start;
+}
+@media only screen and (max-width: 470px) {
+	h1 {
+		font-size: 4rem;
+	}
+	.techStackIcon {
+		font-size: 5em;
+	}
+	#techStackDescriptionTitle {
+		font-size: 2rem;
+	}
+	#techStackDescription {
+		font-size: 1.5rem;
+	}
+	#closeDescription {
+		font-size: 2em;
+	}
+	#experienceContainer h4 {
+		font-size: 2rem;
+	}
+	.experienceCardTitle {
+		font-size: 2rem;
+	}
+	.experienceCardSecondaryTitle {
+		font-size: 1.25rem;
+	}
+	.experienceCardBulletPoint {
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width: 900px) {
 	#workExperienceContainer, #educationExperienceContainer  {
-		width: 90%;
+		width: 100%;
 	}
 }
 </style>

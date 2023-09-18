@@ -1,7 +1,8 @@
 <template>
 	<div id="navBar">
 		<div>
-			<h1 id="logo">Russell Leung</h1>
+			<h1 class="logo" id="logoLarge">Russell Leung</h1>
+			<h1 class="logo" id="logoSmall">RL</h1>
 		</div>
 		<div id="linksContainer"> 
 			<ul id="links">
@@ -15,7 +16,6 @@
 			<div>
 				<font-awesome-icon
 					:icon="['fas', 'bars']"
-					size="3x"
 					id="hamburgerMenu"
 					@click="openNavDropdown()"
 				/>
@@ -65,9 +65,12 @@ export default {
 	justify-content: space-between;
 	font-size: 2rem;
 }
-#logo {
+.logo {
 	margin: 0;
 	color: #F1A208;
+}
+#logoSmall {
+	display: none;
 }
 #linksContainer {
 	display: flex;
@@ -88,6 +91,7 @@ a:hover {
 }
 #hamburgerMenu {
 	display: none;
+	font-size: 3em;
 }
 #hamburgerMenu:hover {
 	cursor: pointer;
@@ -110,8 +114,19 @@ a:hover {
 .navBarDropdownItem a:hover {
 	color: white;
 }
+@media only screen and (max-width: 470px) {
+	#hamburgerMenu {
+		font-size: 2em;
+	}
+	#logoSmall {
+		display: block;
+	}
+	#logoLarge {
+		display: none;
+	}
+}
 @media only screen and (max-width: 600px) {
-	#logo {
+	.logo {
 		font-size: 1.5em;
 	}
 	.navBarDropdownItem {

@@ -1,10 +1,10 @@
 <template>
 	<div id="homePage">
 		<div id="greeting">
-			<h2 id="greeting-top">Hi, I'm</h2>
-			<h1 id="greeting-bottom">Russell Leung</h1>
+			<h2 id="greetingTop">Hi, I'm</h2>
+			<h1 id="greetingBottom">Russell Leung</h1>
 		</div>
-		<div id="about-me">
+		<div id="aboutMe">
 			I'm a college student studying Computer Science at Northeastern
 			University! I'm looking to pursue a career in and have experience
 			with Full-Stack development.
@@ -22,16 +22,16 @@ export default {
 #greeting {
 	font-size: 4rem;
 }
-#greeting-top {
+#greetingTop {
 	margin-bottom: 0;
 	animation: fadeIn 2s;
 	font-weight: normal;
 }
-#greeting-bottom {
+#greetingBottom {
 	margin: 0;
 	animation: fadeIn 4s;
 }
-#about-me {
+#aboutMe {
 	font-size: 3rem;
 	background-color: #F1A208;
 	border-radius: 1%;
@@ -43,5 +43,13 @@ export default {
 @keyframes fadeIn {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
+}
+@media only screen and (max-width: 470px) {
+	#greeting {
+		font-size: 3rem;
+	}
+	#aboutMe {
+		font-size: 2rem;
+	}
 }
 </style>

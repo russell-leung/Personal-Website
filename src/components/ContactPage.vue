@@ -4,7 +4,6 @@
 		<div id="contactMessageContainer" v-if="showContactMessage">
 			<font-awesome-icon
 				:icon="['fas', 'x']"
-				size="3x"
 				class="icon"
 				style="float: right;"
 				@click="hideContactMessage()"
@@ -199,7 +198,30 @@ a:active, a:visited, a:link {
 	font-size: 3rem;
 	margin: 0;
 }
-@media only screen and (max-width: 768px) {
+.icon {
+	font-size: 3em;
+}
+@media only screen and (max-width: 470px) {
+	h1 {
+		font-size: 4rem;
+	}
+	#contactContainer {
+		width: 100%;
+	}
+	#contactMessageContainer h4 {
+		font-size: 2rem;
+	}
+	#contactInfo p, #contactInfo a {
+		font-size: 1rem;
+	}
+	input[type=text], input[type=email], input[type=submit] {
+		font-size: 1.25rem;
+	}
+	.icon {
+		font-size: 2em;
+	}
+}
+@media only screen and (max-width: 900px) {
 	#contactForm, #contactInfo  {
 		width: 90%;
 	}

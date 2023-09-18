@@ -87,7 +87,21 @@ h2 {
 .projectCard a {
 	color: white;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 470px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	.projectCard h3 {
+		font-size: 1.5rem;
+	}
+	.projectCard p {
+		font-size: 1.25rem;
+	}
+}
+@media only screen and (max-width: 900px) {
 	.projectCardContainer {
 		width: 90%;
 	}
