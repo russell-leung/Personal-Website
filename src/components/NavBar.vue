@@ -2,8 +2,6 @@
 	<div id="navBar">
 		<div>
 			<h1 id="logo">Russell Leung</h1>
-			<!-- TODO: Remove logo code -->
-			<!-- <img alt="Russell Leung logo" src="../assets/logo.png"> -->
 		</div>
 		<div id="links"> 
 			<ul>

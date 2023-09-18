@@ -4,24 +4,20 @@
 			<h1>Portfolio</h1>
 			<h2>Here is a few projects I've worked on!</h2>
 		</div>
-		<div
-			v-for="(projectDescription, projectName, index) in projects"
-			:key="projectName"
-			id="projectsContainer"
-		>
-		<!-- TODO: Name image the same as project name so i can use something like :href="../assets/{projectName}.png" -->
-			<div id="projectContainer" :class="{ reverseDirection: (index % 2 == 1) }">
-				<div id="projectDescription">
-					<h3>
-						{{ projectName }}
-					</h3>
-					<p>
-						{{ projectDescription }}
-					</p>
-				</div>
-				<div id="projectVisual">
-					Picture/Link to project
-					Probably link to github
+		<div id="projectsContainer">
+			<div
+				v-for="(projectData, projectName) in projects"
+				:key="projectName"
+				class="projectCardContainer"
+			>
+				<div class="projectCard">
+					<img
+						:alt="projectData['title']"
+						:src="require(`../assets/portfolioImages/${projectName}.png`)"
+					>
+					<h3>{{ projectData['title'] }}</h3>
+					<p>{{ projectData['description'] }}</p>
+					<p><a :href="projectData['link']" target="_blank">Check it out!</a></p>
 				</div>
 			</div>
 		</div>
@@ -34,10 +30,25 @@ export default {
 	data () {
 		return {
 			projects: {
-				projectName1: 'ss',
-				projectName2: 'ss',
-				projectName3: 'ss',
-				projectName4: 'ss',
+				personalPortfolioWebsite: {
+					'title': 'Personal Portfolio Website',
+					'link': 'https://github.com/russell-leung/personal-portfolio',
+					'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
+									'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
+				},
+				// personalPortfoslioWebsite: {
+				// 	'title': 'Personal Portfolio Website',
+				// 	'link': 'https://github.com/russell-leung/personal-portfolio',
+				// 	'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
+				// 					'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
+				// },
+				// personalPortfssolioWebsite: {
+				// 	'title': 'Personal Portfolio Website',
+				// 	'link': 'https://github.com/russell-leung/personal-portfolio',
+				// 	'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
+				// 					'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
+				// 	'imgLink': '../assets/personalPortfolioWebsite.png',
+				// },
 			},
 		}
 	}
@@ -54,23 +65,39 @@ h2 {
 	font-size: 4rem;
 	margin: 0;
 }
-.reverseDirection {
-	flex-direction: row-reverse;
-}
-#projectContainer {
+#projectsContainer {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
-#projectDescription, #projectVisual {
+.projectCardContainer {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 2% 1%;
 	width: 45%;
-	/* TODO: remove background/find perm solution */
-	/* TODO: change border radius to 1% */
-	border: 1px solid #2c3e50;
-	padding: 2% 0;
-	margin: 2% 0;
 }
-#projectDescription {
+/* TODO: media query width */
+.projectCard {
 	background-color: #F1A208;
+	color: white;
+	padding: 5%;
+}
+.projectCard img {
+	box-sizing: border-box;
+	max-height: 100%;
+	max-width: 100%;
+	margin: 0 0 1% 0;
+	border: 1px solid white;
+}
+.projectCard h3 {
+	font-size: 2rem;
+	margin: 0;
+}
+.projectCard p {
+	font-size: 1.5rem;
+	margin: 0;
+}
+.projectCard a {
 	color: white;
 }
 </style>
