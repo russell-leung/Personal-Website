@@ -30,25 +30,13 @@ export default {
 	data () {
 		return {
 			projects: {
+				// More Projects To Be Added
 				personalPortfolioWebsite: {
 					'title': 'Personal Portfolio Website',
 					'link': 'https://github.com/russell-leung/personal-portfolio',
 					'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
 									'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
 				},
-				// personalPortfoslioWebsite: {
-				// 	'title': 'Personal Portfolio Website',
-				// 	'link': 'https://github.com/russell-leung/personal-portfolio',
-				// 	'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
-				// 					'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
-				// },
-				// personalPortfssolioWebsite: {
-				// 	'title': 'Personal Portfolio Website',
-				// 	'link': 'https://github.com/russell-leung/personal-portfolio',
-				// 	'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
-				// 					'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
-				// 	'imgLink': '../assets/personalPortfolioWebsite.png',
-				// },
 			},
 		}
 	}
@@ -76,7 +64,6 @@ h2 {
 	margin: 2% 1%;
 	width: 45%;
 }
-/* TODO: media query width */
 .projectCard {
 	background-color: #F1A208;
 	color: white;
@@ -99,5 +86,10 @@ h2 {
 }
 .projectCard a {
 	color: white;
+}
+@media only screen and (max-width: 768px) {
+	.projectCardContainer {
+		width: 90%;
+	}
 }
 </style>

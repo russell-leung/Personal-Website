@@ -207,6 +207,7 @@ h1 {
 #experienceContainer {
 	display: flex;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 	width: 100%;
 }
 #experienceContainer h4 {
@@ -229,5 +230,10 @@ h1 {
 	color: #2c3e50;
 	margin: 3% 5%;
 	padding: 1%;
+}
+@media only screen and (max-width: 768px) {
+	#workExperienceContainer, #educationExperienceContainer  {
+		width: 90%;
+	}
 }
 </style>

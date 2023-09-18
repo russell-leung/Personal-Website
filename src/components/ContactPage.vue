@@ -138,6 +138,7 @@ h1 {
 #contactContainer {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	width: 75%;
 	background-color: #F1A208;
 	color: white;
@@ -197,5 +198,13 @@ a:active, a:visited, a:link {
 #contactMessageContainer h4 {
 	font-size: 3rem;
 	margin: 0;
+}
+@media only screen and (max-width: 768px) {
+	#contactForm, #contactInfo  {
+		width: 90%;
+	}
+	#contactInfo {
+		margin: 5% 0 0 0;
+	}
 }
 </style>
