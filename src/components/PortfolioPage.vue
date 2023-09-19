@@ -35,7 +35,7 @@ export default {
 					'title': 'Personal Portfolio Website',
 					'link': 'https://github.com/russell-leung/personal-portfolio',
 					'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
-									'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently building.',
+									'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently viewing.',
 				},
 			},
 		}

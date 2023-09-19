@@ -94,7 +94,7 @@ export default {
 							'I\'ve used Django, Flask, and NumPy in personal projects and classes. ' +
 							'I\'m familiar with Python Object Oriented Programming and Data Structures.',
 				'java': 'I have about a year of experience using Java. ' +
-						'I recieved a 5 on the AP Computer Science A test, and am familiar with basic ' +
+						'I earned a 5 on the AP Computer Science A test, and am familiar with basic ' +
 						'Java Object Oriented Programming and Algorithms.',
 				'html5': 'I have 4+ years of experience using HTML (HyperText Markup Language) ' +
 							'via multiple classes and projects, like the website you are viewing now. ' +
