@@ -124,6 +124,9 @@ a:hover {
 	#logoLarge {
 		display: none;
 	}
+	.navBarDropdownItem {
+		font-size: 1rem !important;
+	}
 }
 @media only screen and (max-width: 600px) {
 	.logo {
