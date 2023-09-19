@@ -88,13 +88,12 @@ export default {
 			techStackIcons: {
 				'js': 'I have 3+ years of experience with JavaScript (JS). ' +
 						'I\'ve used JS, Node.js, JQuery, and Vue.js both in personal projects, ' +
-						'such as this website you\'re viewing currentl, as well as in ' +
+						'such as this website you\'re viewing currently, as well as in ' +
 						'my prior internship experience at HydraCor, LLC as a Software Developer Intern.',
 				'python': 'I have 4+ years of experience with Python. ' +
 							'I\'ve used Django, Flask, and NumPy in personal projects and classes. ' +
 							'I\'m familiar with Python Object Oriented Programming and Data Structures.',
 				'java': 'I have about a year of experience using Java. ' +
-						'While I\'m not as familiar with Java compared to other languages, ' +
 						'I recieved a 5 on the AP Computer Science A test, and am familiar with basic ' +
 						'Java Object Oriented Programming and Algorithms.',
 				'html5': 'I have 4+ years of experience using HTML (HyperText Markup Language) ' +
