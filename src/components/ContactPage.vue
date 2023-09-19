@@ -71,6 +71,7 @@ export default {
 			emails: [
 				'russell-leung@comcast.net',
 				'leung.ru@northeastern.edu',
+				'contact-me@russell-leung.com',
 			],
 			socialMedia: {
 				'linkedin': {
