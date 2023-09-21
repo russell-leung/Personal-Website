@@ -141,7 +141,7 @@ export default {
 						'STEM Academy',
 						'Classical Academy',
 						'Advanced Placement (AP)',
-						'Dual Enrollement @ NECC',
+						'Dual Enrollment @ NECC',
 					]
 				},
 			},
