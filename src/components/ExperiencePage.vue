@@ -100,7 +100,7 @@ export default {
 							'via multiple classes and projects, like the website you are viewing now. ' +
 							'You can find more examples on my github (https://github.com/russell-leung)',
 				'css3': 'I have 4+ years of experience using CSS (Cascading Style Sheets) ' +
-						'throught many projects and classes, similar to HTML as they go hand in hand.' +
+						'throught many projects and classes, similar to HTML as they go hand in hand. ' +
 						'I also have experience using TailwindCSS and Bootstrap.',
 				'php': 'I have about 2 years of experience using PHP via personal projects ' +
 						'and my internship at HydraCor, LLC. I have experience using CakePHP, a ' +
