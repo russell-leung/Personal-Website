@@ -11,6 +11,9 @@
 			<h4 id="contactMessage">{{ contactMessage }}</h4>
 		</div>
 		<div id="contactContainer">
+			<div id="loading-bar-spinner" class="spinner" style="display:none;">
+				<div class="spinner-icon"></div>
+			</div>
 			<form id="contactForm" ref="contactForm" @submit.prevent="submitForm()">
 				<div
 					v-for="(fieldData, field) in formFields"
@@ -69,8 +72,6 @@ export default {
 				},
 			},
 			emails: [
-				'russell-leung@comcast.net',
-				'leung.ru@northeastern.edu',
 				'contact-me@russell-leung.com',
 			],
 			socialMedia: {
@@ -89,7 +90,8 @@ export default {
 	},
 	methods: {
 		submitForm() {
-			this.$refs.submitButton.style.disabled = true;
+			this.$refs.submitButton.style.disabled = "disabled";
+			document.querySelector('#loading-bar-spinner').style.display = "block";
 			let fullName = document.querySelector('#fullName').value;
 			let email = document.querySelector('#email').value;
 			let message = document.querySelector('#message').value;
@@ -110,6 +112,7 @@ export default {
 				this.contactMessage = 'Form submission failed. Please try again.';
 			}).finally(() => {
 				this.$refs.submitButton.style.disabled = false;
+				document.querySelector('#loading-bar-spinner').style.display = "none";
 				this.showContactMessage = true;
 				setTimeout(() => {
 					this.showContactMessage = false;
@@ -202,9 +205,26 @@ a:active, a:visited, a:link {
 .icon {
 	font-size: 3em;
 }
+#loading-bar-spinner.spinner {
+    position: absolute;
+    z-index: 19 !important;
+    animation: loading-bar-spinner 1s linear infinite;
+}
+#loading-bar-spinner.spinner .spinner-icon {
+    width: 10rem;
+    height: 10rem;
+    border:  solid 4px transparent;
+    border-top-color:  #2c3e50 !important;
+    border-left-color: #2c3e50 !important;
+    border-radius: 50%;
+}
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
 @media only screen and (max-width: 470px) {
 	h1 {
-		font-size: 4rem;
+		font-size: 3.8rem;
 	}
 	#contactContainer {
 		width: 100%;

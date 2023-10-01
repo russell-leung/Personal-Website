@@ -37,6 +37,25 @@ export default {
 					'description': 'A personal portfolio website to showcase my skills as a software developer, ' +
 									'built with Vue.js, HTML, and CSS. In fact it is the website that you are currently viewing.',
 				},
+				hangman: {
+					'title': 'Hangman',
+					'link': 'https://github.com/russell-leung/hangman',
+					'description': 'A hangman game built with Python. It provides more than 800 words to guess from, ' +
+									'and allows users to play multiple games in a row.',
+				},
+				bank: {
+					'title': 'Bank',
+					'link': 'https://github.com/russell-leung/ATM',
+					'description': 'A bank program that allows users to create accounts, deposit, withdraw, and transfer money, ' +
+									'and view their transaction history. Built with Python.',
+				},
+				war: {
+					'title': 'War Simulation',
+					'link': 'https://github.com/russell-leung/war',
+					'description': 'A simulation of the card game War, built with Python. ' +
+									'The program simulates 10 games of War, and outputs the average number of rounds ' +
+									'it takes to win a game of War.',
+				},
 			},
 		}
 	}
@@ -89,7 +108,7 @@ h2 {
 }
 @media only screen and (max-width: 470px) {
 	h1 {
-		font-size: 4rem;
+		font-size: 3.8rem;
 	}
 	h2 {
 		font-size: 3rem;

@@ -116,12 +116,20 @@ export default {
 				'HydraCor': {
 					'jobTitle': 'Software Developer Intern',
 					'experienceBulletPoints': [
-						'Made new features using Vue.js and CakePHP',
+						'Created a QR Code generation and display system',
 						'Discovered and squashed bugs',
 						'Advised and aided junior developers and peers',
-						'Utilized SQL, Docker, Azure, and Git',
-						'Wrote unit tests and database migrations',
-						'Participated in Scrum/Agile system process',
+						'Refactored and optimized legacy code throughout the codebase',
+						'Authored unit tests and database migrations',
+					],
+				},
+				'Haverhill Public Schools': {
+					'jobTitle': 'Senior Additive Manufacturing Instructor',
+					'experienceBulletPoints': [
+						'Instructed middle and elementary students',
+						'Developed a comprehensive 3D printing curriculum',
+						'Innovated by broadening the program to encompass underrepresented STEM demographics',
+						'Led the program, overseeing junior STEM interns',
 					],
 				},
 			},
@@ -130,8 +138,9 @@ export default {
 					'degree': 'B.S. Computer Science',
 					'experienceBulletPoints': [
 						'Freshman (est. Grad Date 2027)',
+						'Concentration in Software Engineering',
 						'Northeastern Honors',
-						'NEU Oasis'
+						'NEU Oasis',
 					],
 				},
 				'Haverhill High School': {
@@ -248,7 +257,7 @@ h1 {
 }
 @media only screen and (max-width: 470px) {
 	h1 {
-		font-size: 4rem;
+		font-size: 3.8rem;
 	}
 	.techStackIcon {
 		font-size: 5em;
