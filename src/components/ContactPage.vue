@@ -43,6 +43,11 @@
 						</a>
 					</p>
 				</div>
+				<br>
+				<div>
+					<p><b>Resume</b></p>
+					<p><a href="../assets/Russell_Leung_Resume.pdf" download>Download Resume</a></p>
+				</div>
 			</div>
 		</div>
 	</div>
