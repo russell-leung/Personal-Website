@@ -122,18 +122,6 @@ export default {
 		hideContactMessage() {
 			this.showContactMessage = false;
 		},
-		downloadResume() {
-			// create element <a> for download PDF
-			const link = document.createElement('a');
-			link.href = '../assets/Russell_Leung_Resume.pdf';
-			link.target = '_blank';
-			link.download = 'Russell_Leung_Resume.pdf';
-
-			// Simulate a click on the element <a>
-			document.body.appendChild(link);
-			link.click();
-			document.body.removeChild(link);
-		}
 	}
 }
 </script>
