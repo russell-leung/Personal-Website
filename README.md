@@ -24,7 +24,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## TODO Ideas List
-- Downloadable Resume
-- Loading Bar on Form Submit
