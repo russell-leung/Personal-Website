@@ -137,7 +137,7 @@ export default {
 				'Northeastern University': {
 					'degree': 'B.S. Computer Science',
 					'experienceBulletPoints': [
-						'Freshman (est. Grad Date 2027)',
+						'est. Grad Date 2026',
 						'Concentration in Software Engineering',
 						'Northeastern Honors',
 						'NEU Oasis',
