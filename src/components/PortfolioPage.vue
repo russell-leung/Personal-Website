@@ -31,6 +31,12 @@ export default {
 		return {
 			projects: {
 				// More Projects To Be Added
+				letsLink : {
+					'title': 'Let\'s Link',
+					'link': 'https://devpost.com/software/let-s-link',
+					'description': 'We\'re all busy people. Finding times to meet can be hard. Introduce Let\'s Link, all you do' +
+									'is connect your Google Calendar and we\'ll provide the most optimal times for you to meet with friends!',
+				},
 				personalPortfolioWebsite: {
 					'title': 'Personal Portfolio Website',
 					'link': 'https://github.com/russell-leung/personal-portfolio',

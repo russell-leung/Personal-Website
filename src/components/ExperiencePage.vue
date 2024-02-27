@@ -141,6 +141,7 @@ export default {
 						'Concentration in Software Engineering',
 						'Northeastern Honors',
 						'NEU Oasis',
+						'NU SGA Software Developer',
 					],
 				},
 				'Haverhill High School': {
